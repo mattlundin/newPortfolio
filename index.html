@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>newPortfolio</title>
+	</head>
+
+	<body>
+		<nav>
+			<div class="logo">
+				<a href="#home"><span>M</span><span>L</span></a>
+			</div>
+			<ul class="nav-list">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<div class="burger">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
+			</div>
+		</nav>
+
+		<div class="background">
+			<div class="enter">
+				<div class="btn-container">
+					<button class="enter-btn">Enter</button>
+					<p>Audio Enabled</p>
+				</div>
+				<section class="container" id="home">
+					<div class="name">
+						<h1 class="breathe">Matt Lundin</h1>
+						<!-- <div id="intro"></div> -->
+						<audio
+							src="/audio/intro.mp3"
+							id="intro"
+							type="audio/mp3"
+							autoplay
+						></audio>
+					</div>
+
+					<div class="bicycle">
+						<img src="/images/liu-kang-bicycle-kick.gif" alt="" />
+						<audio
+							src="/audio/bicycleKick2.mp3"
+							id="bicycleKick"
+							type="audio/mp3"
+						></audio>
+						<h1 class="code-icon"><i class="fas fa-code"></i></h1>
+					</div>
+
+					<div class="web-developer">
+						<audio
+							src="/audio/uppercut.mp3"
+							id="uppercut"
+							type="audio/mp3"
+						></audio>
+						<ul class="uppercut">
+							<li>W</li>
+							<li>e</li>
+							<li>b</li>
+							<li>&nbsp;</li>
+							<li>D</li>
+							<li>e</li>
+							<li>v</li>
+							<li>e</li>
+							<li>l</li>
+							<li>o</li>
+							<li>p</li>
+							<li>e</li>
+							<li>r</li>
+						</ul>
+					</div>
+
+					<div class="toasty">
+						<img
+							src="images/Toasty.png"
+							height="180px"
+							width="180px"
+							opacity="0"
+						/>
+						<audio src="/audio/toasty.mp3" id="toasty"></audio>
+					</div>
+				</section>
+			</div>
+
+			<section class="container" id="about"></section>
+
+			<section class="container" id="projects"></section>
+
+			<section class="container" id="contact"></section>
+
+			<script src="script.js"></script>
+		</div>
+	</body>
+</html>
+
+<!-- ! page wonky.... added new div 'container' underneath 'enter'. before it went wonky 'container' and 'enter' were in the same div. 2 classes-->
