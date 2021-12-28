@@ -151,8 +151,8 @@ body::-webkit-scrollbar-thumb:hover {
 	transition: transform 3.5s ease;
 	animation: breathe 4s infinite 3.5s;
 	/*! FIX FOR MOZILLA */
-	/* -moz-transform: scale(6.5);
-	-moz-animation: breathe 4s infinite 3.5; */
+	-moz-transform: scale(6.5);
+	-moz-animation: breathe 4s infinite 3.5;
 }
 @keyframes breathe {
 	0% {
