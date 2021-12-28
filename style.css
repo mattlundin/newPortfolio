@@ -8,6 +8,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	background-color: #000;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -21,16 +22,12 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
 	background: #e6e6e6;
 	border-radius: 10px;
-	box-shadow: insert 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	box-shadow: insert 0 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(#2691d9, #954eb1);
+	box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .background {
@@ -121,7 +118,7 @@ body::-webkit-scrollbar-thumb:hover {
 #home {
 	position: relative;
 	display: flex;
-	visibility: none;
+	visibility: hidden;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
@@ -288,13 +285,12 @@ body::-webkit-scrollbar-thumb:hover {
 	display: flex;
 	justify-content: flex-end;
 	transition: transform 0.2s ease-in-out;
-	overflow: none;
+	overflow: hidden;
 }
 
 .toasty img {
 	position: absolute;
 	bottom: 0;
-	float: bottom;
 	opacity: 0;
 	border: none;
 	outline: none;

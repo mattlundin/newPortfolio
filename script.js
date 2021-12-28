@@ -6,7 +6,7 @@ const homePage = document.querySelector('#home');
 
 enterBtn.addEventListener('click', () => {
 	btnCont.style.display = 'none';
-	enterScreen.style.visibility = 'none';
+	enterScreen.style.visibility = 'hidden';
 	homePage.style.display = 'flex';
 	homePage.style.visibility = 'visible';
 
