@@ -1,4 +1,4 @@
-//* HOME PAGE
+//^ HOME PAGE
 const enterBtn = document.querySelector('.enter-btn');
 const btnCont = document.querySelector('.btn-container');
 const enterScreen = document.querySelector('.enter');
@@ -10,7 +10,8 @@ enterBtn.addEventListener('click', () => {
 	homePage.style.display = 'flex';
 	homePage.style.visibility = 'visible';
 
-	document.querySelector('body').style.overflowY = 'visible';
+	// ! Refreshing page does not bring it back to homepage... how to fix???
+	// document.querySelector('body').style.overflowY = 'visible';
 	document.querySelector('.enter').classList.add('enter-fade');
 	document.querySelector('.code-icon').style.animation = 'codeFade 6s ease-in';
 	document.querySelector('.bicycle img').style.animation =
@@ -43,12 +44,31 @@ enterBtn.addEventListener('click', () => {
 
 	setTimeout(function () {
 		document.getElementById('uppercut').play();
-	}, 2300); /* -1 sec */
+	}, 2300);
 
 	setTimeout(function () {
 		document.getElementById('toasty').play();
-	}, 2700); /* -1 sec */
+	}, 2700);
 	setTimeout(function () {
 		document.getElementById('bicycleKick').play();
-	}, 3400); /* -1 sec */
+	}, 3400);
 });
+
+//^ Navbar
+const nav = document.querySelector('nav');
+
+//* Hide navbar on scroll
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function () {
+	let currentScrollPos = window.pageYOffset;
+	if (prevScrollPos > currentScrollPos) {
+		nav.style.top = '0';
+	} else {
+		nav.style.top = '-60px';
+	}
+	prevScrollPos = currentScrollPos;
+
+	if (window.screen.width <= '500px') {
+		nav.style.top = '0';
+	}
+};
