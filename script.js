@@ -74,19 +74,69 @@ enterBtn.addEventListener('click', () => {
 });
 
 //* ABOUT PAGE
-window.onscroll = function () {
-	const responsiveContainer = document.querySelector('.responsive-icons');
-	const phoneIcon = document.querySelector('.phone');
-	const tabletIcon = document.querySelector('.tablet');
-	const monitorIcon = document.querySelector('.monitor');
+// window.onscroll = function () {
+// 	const responsiveContainer = document.querySelector('.responsive-icons');
+// 	const phoneIcon = document.querySelector('.phone');
+// 	const tabletIcon = document.querySelector('.tablet');
+// 	const monitorIcon = document.querySelector('.monitor');
 
-	if (
-		window.scrollY >
-		responsiveContainer.offsetTop -
-			(window.innerHeight - responsiveContainer.clientHeight)
-	) {
-	}
-};
+// 	if (
+// 		window.scrollY >
+// 		responsiveContainer.offsetTop -
+// 			(window.innerHeight - responsiveContainer.clientHeight)
+// 	) {
+// 	}
+// };
 
 // icons animation
-const visibleIcon = document.querySelector('.visible-icon');
+window.addEventListener('scroll', () => {
+	let iconBox = document.querySelector('.responsive-icons');
+	let iconPosition = iconBox.getBoundingClientRect().top;
+	let screenPosition = window.innerHeight / 1.4;
+
+	if (iconPosition < screenPosition) {
+		iconBox.classList.add('zoom-in');
+	} else {
+		iconBox.classList.remove('zoom-in');
+	}
+});
+
+//* PROJECTS PAGE
+
+// window.addEventListener('scroll', () => {
+// 	const leftIn = document.querySelectorAll('.left-in');
+// 	const rightIn = document.querySelectorAll('.right-in');
+
+// 	let projectsHeader = document.querySelector('.projects-header');
+// 	let projectsPosition = projectsHeader.getBoundingClientRect().top;
+// 	let screenPosition = window.innerHeight / 2;
+
+// 	if (screenPosition < projectsPosition) {
+// 		leftIn.classList.add('slide');
+// 		rightIn.classList.add('slide');
+// 	} else {
+// 		leftIn.classList.remove('slide');
+// 		rightIn.classList.remove('slide');
+// 	}
+// });
+
+const unstacked = document.querySelectorAll('.unstacked');
+
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			entry.target.classList.toggle('stacked', entry.isIntersecting);
+			// entry.target.style.
+			// stacked.classList.add('unstack');
+			// if (entry.isIntersecting) observer.unobserve(entry.target);
+		});
+	},
+	{
+		threshold: 0.6,
+		// rootMargin: '-100px',
+	},
+);
+
+unstacked.forEach((unstack) => {
+	observer.observe(unstack);
+});
