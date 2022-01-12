@@ -1,4 +1,23 @@
-//^ HOME PAGE
+//* Navbar
+const nav = document.querySelector('nav');
+
+//~ Hide navbar on scroll
+let prevScrollPos = window.pageYOffset;
+window.addEventListener('scroll', function () {
+	let currentScrollPos = window.pageYOffset;
+	if (prevScrollPos > currentScrollPos) {
+		nav.style.top = '0';
+	} else {
+		nav.style.top = '-60px';
+	}
+	prevScrollPos = currentScrollPos;
+
+	if (window.screen.width <= '500px') {
+		nav.style.top = '0';
+	}
+});
+
+//* HOME PAGE
 const enterBtn = document.querySelector('.enter-btn');
 const btnCont = document.querySelector('.btn-container');
 const enterScreen = document.querySelector('.enter');
@@ -18,12 +37,12 @@ enterBtn.addEventListener('click', () => {
 		'bicycleKick 3s 3.1s';
 	document.querySelector('.code-icon').style.transform = 'rotate(-720deg)';
 	document.querySelector('.code-icon').style.transition =
-		'transform 1.8s ease-out 4.3s'; /* -1 sec */
+		'transform 1.8s ease-out 4.3s';
 
 	document.querySelector('.breathe').classList.add('breathe-zoom');
 	document.querySelector('.uppercut').style.animation = 'codeFade 5s ease-in';
 	document.querySelector('.uppercut').style.animation =
-		'uppercut 1.5s ease-out 2.3s'; /* -1 sec */
+		'uppercut 1.5s ease-out 2.3s';
 	document.querySelector('.toasty img').classList.add('toasty-animation');
 
 	setTimeout(function () {
@@ -54,21 +73,20 @@ enterBtn.addEventListener('click', () => {
 	}, 3400);
 });
 
-//^ Navbar
-const nav = document.querySelector('nav');
-
-//* Hide navbar on scroll
-let prevScrollPos = window.pageYOffset;
+//* ABOUT PAGE
 window.onscroll = function () {
-	let currentScrollPos = window.pageYOffset;
-	if (prevScrollPos > currentScrollPos) {
-		nav.style.top = '0';
-	} else {
-		nav.style.top = '-60px';
-	}
-	prevScrollPos = currentScrollPos;
+	const responsiveContainer = document.querySelector('.responsive-icons');
+	const phoneIcon = document.querySelector('.phone');
+	const tabletIcon = document.querySelector('.tablet');
+	const monitorIcon = document.querySelector('.monitor');
 
-	if (window.screen.width <= '500px') {
-		nav.style.top = '0';
+	if (
+		window.scrollY >
+		responsiveContainer.offsetTop -
+			(window.innerHeight - responsiveContainer.clientHeight)
+	) {
 	}
 };
+
+// icons animation
+const visibleIcon = document.querySelector('.visible-icon');

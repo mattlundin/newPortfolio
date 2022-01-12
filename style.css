@@ -65,7 +65,7 @@ nav {
 	margin-left: 10px;
 	font-weight: bold;
 	list-style: none;
-	transition: all 0.5s ease-in-out;
+	/* transition: all 0.5s ease-in-out; */
 }
 
 .logo a {
@@ -425,9 +425,10 @@ nav {
 
 .container {
 	height: 100vh; /*! CHANGE TO % WHEN FINISHED*/
-	width: 100%;
+	width: 96%;
 	max-width: 1400px;
 	margin: 3%;
+	/* padding-top: 2rem; */
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 25px;
 	box-shadow: 2px 2px 8px rgb(27, 27, 27);
@@ -436,6 +437,7 @@ nav {
 
 /** ===== ABOUT PAGE ===== */
 #about {
+	height: auto; /*! ERASE WHEN CHANGING CONTAINER HEIGHT*/
 	z-index: 5;
 }
 .header {
@@ -451,17 +453,45 @@ nav {
 
 .header span {
 	height: 100%;
-	width: 100%;
+	width: 96%;
 }
 
 .header span .bug {
 	position: absolute;
-	/* top: 300%; */
-	right: 10%;
-	transform: rotate(-180deg);
+	/* display: flex;
+	align-items: flex-end; */
+	/* right: -10%; */
+	font-size: 0.9rem;
 	z-index: 1;
+	transform: rotate(-98deg);
+	animation: crawl infinite ease 0.22s, across infinite ease 14s;
 }
-/* todo ADD BUG CRAWLING ANIMATION */
+
+@keyframes crawl {
+	0% {
+		transform: rotate(-98deg);
+		/* right: -10%; */
+	}
+	50% {
+		transform: rotate(-82deg);
+		/* right: 50%; */
+	}
+	100% {
+		transform: rotate(-98deg);
+		/* right: 110%; */
+	}
+}
+@keyframes across {
+	0% {
+		right: -50%;
+	}
+	50% {
+		right: 50%;
+	}
+	100% {
+		right: 150%;
+	}
+}
 
 .column {
 	position: relative;
@@ -565,27 +595,60 @@ nav {
 	z-index: -1;
 }
 
+.responsive-icons {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 2rem;
+	width: 100%;
+	font-size: 6rem;
+}
+
+/* icon scroll animation */
+.responsive-icons i {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.8s;
+}
+
+.responsive-icons i.visible:nth-child(1) {
+	transition-delay: 0.3s;
+}
+
+.responsive-icons i.visible:nth-child(2) {
+	transition-delay: 0.6s;
+}
+
+.responsive-icons i.visible:nth-child(3) {
+	transition-delay: 0.9s;
+}
+
+.visible {
+	opacity: 1;
+	transform: none;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.cell {
+	animation: slide-left 1s ease-in-out;
+}
+
+.tablet {
+	animation: slide-up 1s ease-in-out;
+}
+
+.monitor {
+	animation: slide-right 1s ease-in-out;
+}
+
 #projects {
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: #000;
 }
-
-/* 
-background image urls for other sections:
-~paint
-https://images.unsplash.com/photo-1622542796157-af7cb80b5a62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
-
-~office
-https://images.unsplash.com/photo-1506063917336-4814a8d404d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-
-~white lines
-https://images.unsplash.com/photo-1533134755454-9549758f0e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-
-~blue sphere
-https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80
-*/
 
 @media (min-width: 1200px) {
 	.btn-container {
@@ -613,7 +676,11 @@ https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid
 		font-size: 0.5rem;
 	}
 	.column {
+		height: auto;
 		width: 100%;
+	}
+	.container {
+		margin: 1.5rem 0;
 	}
 }
 @media (max-width: 450px) {
@@ -622,3 +689,18 @@ https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid
 		/* overflow-x: hidden; */
 	}
 }
+
+/* 
+background image urls for other sections:
+~paint
+https://images.unsplash.com/photo-1622542796157-af7cb80b5a62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
+
+~office
+https://images.unsplash.com/photo-1506063917336-4814a8d404d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+
+~white lines
+https://images.unsplash.com/photo-1533134755454-9549758f0e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+
+~blue sphere
+https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80
+*/
