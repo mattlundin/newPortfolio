@@ -51,11 +51,11 @@ enterBtn.addEventListener('click', () => {
 	}, 5000);
 
 	//~ AUDIOS CLIPS
-	setTimeout(function () {
-		window.onload = function () {
-			document.getElementById('intro').play();
-		};
-	}, 0);
+	// setTimeout(function () {
+	// 	window.onload = function () {
+	// 		document.getElementById('intro').play();
+	// 	};
+	// }, 0);
 
 	setTimeout(function () {
 		document.getElementById('intro').play();
@@ -68,9 +68,14 @@ enterBtn.addEventListener('click', () => {
 	setTimeout(function () {
 		document.getElementById('toasty').play();
 	}, 2700);
+
 	setTimeout(function () {
 		document.getElementById('bicycleKick').play();
 	}, 3400);
+
+	setTimeout(function () {
+		document.getElementById('sword').play();
+	}, 5000);
 });
 
 //* ABOUT PAGE
@@ -89,54 +94,85 @@ enterBtn.addEventListener('click', () => {
 // };
 
 // icons animation
-window.addEventListener('scroll', () => {
-	let iconBox = document.querySelector('.responsive-icons');
-	let iconPosition = iconBox.getBoundingClientRect().top;
-	let screenPosition = window.innerHeight / 1.4;
+// window.addEventListener('scroll', () => {
+// 	let iconBox = document.querySelector('.responsive-icons');
+// 	let iconPosition = iconBox.getBoundingClientRect().top;
+// 	let screenPosition = window.innerHeight / 1.4;
 
-	if (iconPosition < screenPosition) {
-		iconBox.classList.add('zoom-in');
-	} else {
-		iconBox.classList.remove('zoom-in');
-	}
-});
+// 	if (iconPosition < screenPosition) {
+// 		iconBox.classList.add('zoom-in');
+// 	} else {
+// 		iconBox.classList.remove('zoom-in');
+// 	}
+// });
 
 //* PROJECTS PAGE
 
 // window.addEventListener('scroll', () => {
-// 	const leftIn = document.querySelectorAll('.left-in');
-// 	const rightIn = document.querySelectorAll('.right-in');
-
 // 	let projectsHeader = document.querySelector('.projects-header');
-// 	let projectsPosition = projectsHeader.getBoundingClientRect().top;
-// 	let screenPosition = window.innerHeight / 2;
+// 	const headerLetters = document.querySelectorAll('.projects-header span');
+// 	let headerPosition = projectsHeader.getBoundingClientRect().top;
+// 	let headerScreenPosition = window.innerHeight / 1.4;
+// 	console.log('working');
 
-// 	if (screenPosition < projectsPosition) {
-// 		leftIn.classList.add('slide');
-// 		rightIn.classList.add('slide');
+// 	if (headerPosition < headerScreenPosition) {
+// 		headerLetters.classList.remove('unstacked');
+// 		headerLetters.classList.add('stacked');
+// 		// alert('about time');
 // 	} else {
-// 		leftIn.classList.remove('slide');
-// 		rightIn.classList.remove('slide');
+// 		headerLetters.classList.remove('stacked');
+// 		headerLetters.classList.add('unstacked');
 // 	}
 // });
 
-const unstacked = document.querySelectorAll('.unstacked');
+// Using IntersectionObserver
+// const unstacked = document.querySelectorAll('.unstacked');
 
-const observer = new IntersectionObserver(
-	(entries) => {
-		entries.forEach((entry) => {
-			entry.target.classList.toggle('stacked', entry.isIntersecting);
-			// entry.target.style.
-			// stacked.classList.add('unstack');
-			// if (entry.isIntersecting) observer.unobserve(entry.target);
-		});
-	},
-	{
-		threshold: 0.6,
-		// rootMargin: '-100px',
-	},
-);
+// let observer = new IntersectionObserver(
+// 	(entries) => {
+// 		entries.forEach((entry) => {
+// 			entry.target.classList.toggle('stacked', entry.isIntersecting);
+// 		});
+// 	},
+// 	{
+// 		root: null,
+// 		threshold: 0.6,
+// 		// rootMargin: '-100px',
+// 	},
+// );
 
-unstacked.forEach((unstack) => {
-	observer.observe(unstack);
-});
+// unstacked.forEach((unstack) => {
+// 	observer.observe(unstack);
+// });
+
+// const fadeUp = document.querySelectorAll('.fade-up');
+// const projectImg = document.querySelectorAll('.project-img');
+
+// let observer2 = new IntersectionObserver(
+// 	(entries2) => {
+// 		entries2.forEach((entry2) => {
+// 			entry2.target.classList.toggle('in-view', entry2.isIntersecting);
+// 			// alert('yoyoyo');
+// 		});
+// 	},
+// 	{
+// 		root: null,
+// 		threshold: 0.8,
+// 	},
+// );
+
+// projectImg.forEach((img) => {
+// 	observer2.observe(img);
+// });
+
+// window.addEventListener('scroll', () => {
+// 	let fadeUp = document.querySelectorAll('.fade-up');
+// 	let projectPosition = fadeUp.getBoundingClientRect().top;
+// 	let boxPosition = window.innerHeight / 1.4;
+
+// 	if (projectPosition < boxPosition) {
+// 		fadeUp.classList.add('in-view');
+// 	} else {
+// 		fadeUp.classList.remove('in-view');
+// 	}
+// });
