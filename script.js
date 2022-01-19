@@ -32,14 +32,20 @@ enterBtn.addEventListener('click', () => {
 	// ! Refreshing page does not bring it back to homepage... how to fix???
 	// document.querySelector('body').style.overflowY = 'visible';
 	document.querySelector('.enter').classList.add('enter-fade');
+
+	let breathe = document.querySelector('.breathe');
+	breathe.classList.add('breathe-zoom');
+	// for mozilla
+	setTimeout(() => {
+		breathe.style.animation = 'breathe 4s infinite';
+	}, 3500);
+
 	document.querySelector('.code-icon').style.animation = 'codeFade 6s ease-in';
 	document.querySelector('.bicycle img').style.animation =
 		'bicycleKick 3s 3.1s';
 	document.querySelector('.code-icon').style.transform = 'rotate(-720deg)';
 	document.querySelector('.code-icon').style.transition =
 		'transform 1.8s ease-out 4.3s';
-
-	document.querySelector('.breathe').classList.add('breathe-zoom');
 	document.querySelector('.uppercut').style.animation = 'codeFade 5s ease-in';
 	document.querySelector('.uppercut').style.animation =
 		'uppercut 1.5s ease-out 2.3s';
@@ -51,31 +57,26 @@ enterBtn.addEventListener('click', () => {
 	}, 5000);
 
 	//~ AUDIOS CLIPS
-	// setTimeout(function () {
-	// 	window.onload = function () {
-	// 		document.getElementById('intro').play();
-	// 	};
-	// }, 0);
-
-	setTimeout(function () {
+	setTimeout(() => {
 		document.getElementById('intro').play();
 	}, 0);
 
-	setTimeout(function () {
+	setTimeout(() => {
 		document.getElementById('uppercut').play();
 	}, 2300);
 
-	setTimeout(function () {
+	setTimeout(() => {
 		document.getElementById('toasty').play();
 	}, 2700);
 
-	setTimeout(function () {
+	setTimeout(() => {
 		document.getElementById('bicycleKick').play();
 	}, 3400);
 
-	setTimeout(function () {
-		document.getElementById('sword').play();
-	}, 5000);
+	setTimeout(() => {
+		document.getElementById('what').play();
+	}, 5200);
+	document.getElementById('what').volume = '0.3';
 });
 
 //* ABOUT PAGE
