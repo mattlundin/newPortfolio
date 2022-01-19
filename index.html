@@ -16,6 +16,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css" />
 		<title>newPortfolio</title>
 	</head>
@@ -36,9 +37,13 @@
 				<div class="line line2"></div>
 				<div class="line line3"></div>
 			</div>
+      <div>
+        <audio src="audio/what.mp3" id="what" type="audio/mp3"></audio>
+      </div>
 		</nav>
 
 		<div class="background">
+			<!-- <div class="container"> -->
 			<div class="enter">
 				<div class="btn-container">
 					<button class="enter-btn">Enter</button>
@@ -47,7 +52,10 @@
 				<section id="home">
 					<div>
 						<h1 class="breathe">Matt Lundin</h1>
+
+
 						<!-- <div id="intro"></div> -->
+
 						<audio src="audio/intro.mp3" id="intro" type="audio/mp3"></audio>
 					</div>
 
@@ -94,6 +102,7 @@
 						<audio src="audio/toasty.mp3" id="toasty" alt="toasty"></audio>
 					</div>
 				</section>
+				<!-- </div> -->
 			</div>
 
 			<section class="container" id="about">
@@ -118,35 +127,139 @@
 							<span>D</span>
 						</h3>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-							hic amet, repellat dolorum blanditiis in officiis nisi aliquam
-							doloremque eos quidem placeat ex qui aspernatur itaque! Temporibus
-							aspernatur, a, ex porro magni dignissimos eum sapiente ab
-							laboriosam cupiditate, quaerat voluptate accusamus. Accusamus
-							reprehenderit modi deserunt vel vero maiores veritatis provident.
+
+							My name is Matt and I am a front-end developer in Montgomery,
+							Texas and I love bringing websites to life. I may have a
+							<em>slight</em> obsession with animations and transitions.
+							Currently I'm focusing primarily on vanilla JavaScript for
+							functionality while using CSS to make it really pop.
 						</p>
 					</div>
 					<div class="column">
 						<h3>&nbsp;</h3>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
-							expedita numquam pariatur minus quis repellendus facilis
-							consectetur qui, dolorem iusto mollitia ipsam eum voluptate
-							ducimus enim id dicta porro et. Voluptatum consectetur cum id
-							facilis vitae ducimus. Iste nesciunt, ducimus deserunt non atque
-							neque, saepe libero dolorem iusto exercitationem hic.
+
+							I enjoy making websites dance and learning about new interactive
+							ways that I can implement to give visitors an unforgettable
+							experience. From a monitor to a cell phone and everything in
+							between I give websites a seamless transition no matter what
+							screen size it's being viewed on.
+						</p>
+					</div>
+				</div>
+        <div class="responsive-icons">
+          <div class="cell" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="200"><i class="fas fa-mobile-alt"></i></div>
+          <div class="tablet" data-aos="flip-up" data-aos-duration="1500"><i class="fas fa-tablet-alt"></i></div>
+          <div class="monitor" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200"><i class="fas fa-desktop"></i></div>
+        </div>
+				<!-- <div class="responsive-icons">
+					<i class="fas fa-mobile-alt"></i>
+					<i class="fas fa-tablet-alt"></i>
+					<i class="fas fa-desktop"></i>
+				</div> -->
+			</section>
+
+			<section class="container" id="projects">
+				<div class="projects-header">
+          <p>
+            <div data-aos="zoom-in-right" data-aos-duration="3000">P</div>
+            <div data-aos="zoom-in-left" data-aos-duration="3000">R</div>
+            <div data-aos="zoom-in-right" data-aos-duration="3000">O</div>
+            <div data-aos="zoom-in-left" data-aos-duration="3000">J</div>
+            <div data-aos="zoom-in-right" data-aos-duration="3000">E</div>
+            <div data-aos="zoom-in-left" data-aos-duration="3000">C</div>
+            <div data-aos="zoom-in-right" data-aos-duration="3000">T</div>
+            <div data-aos="zoom-in-left" data-aos-duration="3000">S</div>
+        </p>
+				</div>
+        <div class="projects-section">
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/weCreate/" alt="weCreate"target="_blank">
+                <img src="images/weCreate.avif">
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/Dice-Game/" alt="Dice-Game"target="_blank">
+                <img src="images/Dice-Game.avif">
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/PC-Repair/" alt="PC-Repair"target="_blank">
+                <img src="images/PC-Repair.avif">
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/liteBrite/" alt="weCreate"target="_blank">
+                <img src="images/liteBrite.avif">
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/Simple-Grocery-List/" alt="bootstrap"target="_blank">
+                <img src="images/Grocery-List.avif">
+              </a>
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/AstrophotographyCarousel/" alt="image-slider" target="_blank">
+                <img src="images/AstrophotographyCarousel1.avif">
+              </a>
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-img" data-aos="zoom-in-up" data-aos-duration="1800">
+              <a href="https://mattlundin.github.io/To-Do-List/" alt="to-do list" target="_blank">
+                <img src="images/To-Do-List.avif">
+              </a>
+            </div>
+          </div>
+
+        </div>
+			</section>
+
+			<section class="container" id="contact">
+        <div class="contact-header">
+          <h3>Contact Me</h3>
+        </div>
+
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="container" id="projects"></section>
+        <div class="form-container">
+          <form action="mail.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="name" required>
 
-			<section class="container" id="contact"></section>
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="email" required>
 
+            <label for="message">Message</label>
+            <textarea type="text" name="message" placeholder="message" required></textarea><br>
+
+            <div class="buttons">
+              <input type="submit" value="Send" class="send">
+              <input type="reset" value="Clear" class="clear">
+            </div>
+          </form>
+          <a href="https://github.com/mattlundin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      
 			<script src="script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 		</div>
 	</body>
 </html>
-
-<!-- ! page wonky.... added new div 'container' underneath 'enter'. before it went wonky 'container' and 'enter' were in the same div. 2 classes-->
