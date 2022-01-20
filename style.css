@@ -962,7 +962,7 @@ form textarea {
 		width: 75%;
 		background-color: #161616;
 		/* background-color: #0e0000f1; */
-		transform: translateX(-100vw);
+		transform: translateX(-120vw);
 		transition: 0.4s ease-in-out;
 	}
 	.burger {
@@ -1050,6 +1050,12 @@ form textarea {
 		width: 100%;
 		margin: 0.5rem 0;
 	}
+	.form-container {
+		padding: 0;
+	}
+	form {
+		width: 96%;
+	}
 }
 
 @media (max-width: 375px) {
@@ -1069,12 +1075,6 @@ form textarea {
 		min-height: 200px;
 		width: 100%;
 		margin: 0.5rem 0;
-	}
-	.form-container {
-		padding: 0;
-	}
-	form {
-		width: 96%;
 	}
 }
 
