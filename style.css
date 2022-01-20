@@ -260,20 +260,20 @@ nav {
 		text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
 			0px 0px 1px rgba(255, 0, 0, 0.2);
 		transform: scale(7.5);
-		transition: transform 3.5s linear;
+		/* transition: transform 3.5s linear; */
 	}
 	50% {
 		text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
 			1px 6px 1px rgba(255, 0, 0, 0.3);
 		transform: scale(6.5);
-		transition: transform 3.5s linear;
+		/* transition: transform 3.5s linear; */
 		letter-spacing: 0;
 	}
 	100% {
 		text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
 			0px 0px 1px rgba(255, 0, 0, 0.2);
 		transform: scale(7.5);
-		transition: transform 3.5s linear;
+		/* transition: transform 3.5s linear; */
 	}
 }
 
@@ -289,9 +289,10 @@ nav {
 .bicycle img {
 	position: absolute;
 	height: 120px;
+	width: auto;
 	margin-top: 50px;
 	margin-right: 170px;
-	width: auto;
+	right: 0;
 	transform: translateX(-70vw);
 	transition: transform linear 1.5s;
 	/* animation: bicycleKick 3s 4.2s; */
@@ -882,17 +883,45 @@ form textarea {
 	}
 }
 
-@media (max-width: 770px) {
+@media (max-width: 1165px) {
+	.responsive-icons {
+		font-size: 7rem;
+	}
+	.projects-container {
+		max-height: 320px;
+		height: 300px;
+		max-width: 450px;
+		margin: 0.5rem;
+	}
+}
+
+@media (max-width: 932px) {
 	.container {
 		width: 96%;
 	}
 	.breathe {
-		font-size: 0.75rem;
+		font-size: 0.8rem;
+	}
+	.responsive-icons {
+		font-size: 5.5rem;
+	}
+	.projects-header {
+		font-size: 8.5rem;
+	}
+	.projects-container {
+		max-height: 420px;
+		height: 400px;
+		max-width: 600px;
+		margin: 1rem 0.3rem;
 	}
 }
-@media (max-width: 600px) {
+
+@media (max-width: 750px) {
 	.breathe {
-		font-size: 0.5rem;
+		font-size: 0.7rem;
+	}
+	.header {
+		font-size: 1.5rem;
 	}
 	.column {
 		height: auto;
@@ -901,11 +930,134 @@ form textarea {
 	.container {
 		margin: 1.5rem 0;
 	}
+	.projects-header {
+		font-size: 7.5rem;
+	}
 }
-@media (max-width: 450px) {
+
+@media (max-width: 650px) {
+	/* MOBILE NAV */
+	.nav-list {
+		position: fixed;
+		flex-direction: column;
+	}
 	.breathe {
-		font-size: 0.32rem;
-		/* overflow-x: hidden; */
+		font-size: 0.5rem;
+		letter-spacing: 0.5px;
+	}
+	@keyframes breathe {
+		0% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+				0px 0px 1px rgba(255, 0, 0, 0.2);
+			transform: scale(7.5);
+			/* transition: transform 3.5s linear; */
+		}
+		50% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+				1px 4px 1px rgba(255, 0, 0, 0.3);
+			transform: scale(6.5);
+			/* transition: transform 3.5s linear; */
+			letter-spacing: 0;
+		}
+		100% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+				0px 0px 1px rgba(255, 0, 0, 0.2);
+			transform: scale(7.5);
+			/* transition: transform 3.5s linear; */
+		}
+	}
+	.projects-header {
+		font-size: 6rem;
+	}
+	.projects-container {
+		max-height: 320px;
+		height: 300px;
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 500px) {
+	.bicycle img {
+		height: 175px;
+		width: 175px;
+		right: 5px;
+	}
+	.breathe {
+		font-size: 0.35rem;
+		letter-spacing: none;
+	}
+	.responsive-icons {
+		font-size: 4rem;
+	}
+	.projects-header {
+		font-size: 4.5rem;
+	}
+	.projects-container {
+		max-height: 270px;
+		min-height: 220px;
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.breathe {
+		font-size: 0.3rem;
+	}
+	.bicycle img {
+		height: 135px;
+		width: 135px;
+		right: 1px;
+	}
+	.header {
+		font-size: 1.3rem;
+	}
+	.projects-container {
+		max-height: 250px;
+		min-height: 200px;
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+}
+
+@media (max-width: 300px) {
+	.breathe {
+		font-size: 0.2rem;
+	}
+	@keyframes breathe {
+		0% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+				0px 0px 1px rgba(255, 0, 0, 0.2);
+			transform: scale(7.5);
+			/* transition: transform 3.5s linear; */
+		}
+		50% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+				1px 2px 1px rgba(255, 0, 0, 0.3);
+			transform: scale(6.5);
+			/* transition: transform 3.5s linear; */
+			letter-spacing: 0;
+		}
+		100% {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+				0px 0px 1px rgba(255, 0, 0, 0.2);
+			transform: scale(7.5);
+			/* transition: transform 3.5s linear; */
+		}
+	}
+	.code-icon {
+		font-size: 2.5rem;
+	}
+	.bicycle img {
+		height: 100px;
+		width: 100px;
+	}
+	.uppercut {
+		font-size: 2rem;
+	}
+	.toasty img {
+		height: 110px;
+		width: 110px;
 	}
 }
 
