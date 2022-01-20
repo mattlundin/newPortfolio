@@ -172,7 +172,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 100vh;
+	height: calc(100vh - 50px);
 	width: 100%;
 }
 
@@ -264,6 +264,7 @@ nav {
 	background-color: #000;
 	color: #fff;
 	letter-spacing: 1px;
+	border: none;
 }
 
 .breathe-zoom {
@@ -310,9 +311,8 @@ nav {
 	position: absolute;
 	height: 120px;
 	width: auto;
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-right: 170px;
-	right: 0;
 	transform: translateX(-70vw);
 	transition: transform linear 1.5s;
 	/* animation: bicycleKick 3s 4.2s; */
@@ -944,7 +944,6 @@ form textarea {
 	.header {
 		font-size: 1.5rem;
 	}
-
 	.container {
 		margin: 1.5rem 0;
 	}
@@ -991,8 +990,8 @@ form textarea {
 	/* END OF MOBILE NAV */
 
 	.bicycle img {
-		height: 175px;
-		width: 175px;
+		height: 145px;
+		width: 145px;
 		right: 5px;
 	}
 	.breathe {
@@ -1042,6 +1041,14 @@ form textarea {
 		font-size: 0.35rem;
 		letter-spacing: none;
 	}
+	.bicycle img {
+		height: 120px;
+		width: 120px;
+		right: 1px;
+	}
+	.code-icon {
+		font-size: 3rem;
+	}
 	.responsive-icons {
 		font-size: 4rem;
 	}
@@ -1065,11 +1072,6 @@ form textarea {
 @media (max-width: 375px) {
 	.breathe {
 		font-size: 0.3rem;
-	}
-	.bicycle img {
-		height: 135px;
-		width: 135px;
-		right: 1px;
 	}
 	.header {
 		font-size: 1.3rem;
