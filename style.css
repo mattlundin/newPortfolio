@@ -706,7 +706,7 @@ nav {
 	font-size: 10rem;
 	font-weight: bold;
 	text-shadow: 4px 4px 8px #929292;
-	overflow: none;
+	overflow: hidden;
 }
 
 /* .unstacked {
