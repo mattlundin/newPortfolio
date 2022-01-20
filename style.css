@@ -1019,6 +1019,10 @@ form textarea {
 			/* transition: transform 3.5s linear; */
 		}
 	}
+	.web-developer,
+	.toasty {
+		margin-bottom: 40px;
+	}
 	.column {
 		height: auto;
 		width: 100%;
