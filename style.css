@@ -91,7 +91,7 @@ nav {
 	align-items: center;
 	height: 100%;
 	margin-left: auto;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	list-style-type: none;
 	text-decoration: none;
 }
@@ -133,6 +133,22 @@ nav {
 	transform-origin: bottom left;
 }
 
+.burger {
+	display: none;
+	margin-left: auto;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.burger .line {
+	background-color: #fff;
+	height: 4px;
+	width: 30px;
+	margin: 5px;
+	border-radius: 2px;
+	transition: 0.4s ease-in-out;
+}
+
 /** ===== ENTER PAGE =====  */
 .background {
 	display: flex;
@@ -147,7 +163,6 @@ nav {
 	background-attachment: fixed;
 }
 
-/** ===== ENTER PAGE =====  */
 .enter {
 	display: flex;
 	align-items: center;
@@ -499,7 +514,7 @@ nav {
 }
 
 .column {
-	position: relative;
+	/* position: relative; */
 	padding: 10px;
 	height: 300px; /*! remove height*/
 	width: 50%;
@@ -508,7 +523,7 @@ nav {
 }
 
 .column h3 {
-	position: relative;
+	/* position: relative; */
 	text-align: center;
 	font-size: 1.6rem;
 }
@@ -923,10 +938,7 @@ form textarea {
 	.header {
 		font-size: 1.5rem;
 	}
-	.column {
-		height: auto;
-		width: 100%;
-	}
+
 	.container {
 		margin: 1.5rem 0;
 	}
@@ -940,6 +952,41 @@ form textarea {
 	.nav-list {
 		position: fixed;
 		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		right: 0;
+		bottom: 0;
+		height: calc(100vh - 50px);
+		width: 75%;
+		background-color: #161616;
+		/* background-color: #0e0000f1; */
+		transform: translateX(-100vw);
+		transition: 0.4s ease-in-out;
+	}
+	.burger {
+		display: block;
+	}
+	.toggle .line1 {
+		transform: rotate(315deg) translate(-5px, 8px);
+		transition: transform 0.4s ease-in-out;
+	}
+	.toggle .line2 {
+		opacity: 0;
+		transform: scale(0);
+		transition: all 0.7s ease-in-out;
+	}
+	.toggle .line3 {
+		transform: rotate(-315deg) translate(-5px, -8px);
+		transition: transform 0.4s ease-in-out;
+	}
+	.open {
+		transform: translateY(0);
+	}
+	/* END OF MOBILE NAV */
+	.bicycle img {
+		height: 175px;
+		width: 175px;
+		right: 5px;
 	}
 	.breathe {
 		font-size: 0.5rem;
@@ -966,6 +1013,13 @@ form textarea {
 			/* transition: transform 3.5s linear; */
 		}
 	}
+	.column {
+		height: auto;
+		width: 100%;
+	}
+	.column .space {
+		display: none;
+	}
 	.projects-header {
 		font-size: 6rem;
 	}
@@ -977,11 +1031,6 @@ form textarea {
 }
 
 @media (max-width: 500px) {
-	.bicycle img {
-		height: 175px;
-		width: 175px;
-		right: 5px;
-	}
 	.breathe {
 		font-size: 0.35rem;
 		letter-spacing: none;
@@ -1017,6 +1066,12 @@ form textarea {
 		min-height: 200px;
 		width: 100%;
 		margin: 0.5rem 0;
+	}
+	.form-container {
+		padding: 0;
+	}
+	form {
+		width: 96%;
 	}
 }
 
@@ -1058,6 +1113,12 @@ form textarea {
 	.toasty img {
 		height: 110px;
 		width: 110px;
+	}
+	.projects-header {
+		font-size: 3rem;
+	}
+	form {
+		width: 100%;
 	}
 }
 

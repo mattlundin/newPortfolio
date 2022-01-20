@@ -17,6 +17,27 @@ window.addEventListener('scroll', function () {
 	}
 });
 
+// MOBILE NAV
+const navSlide = () => {
+	const navList = document.querySelector('.nav-list');
+	const navItem = document.querySelectorAll('.nav-list li');
+	const burger = document.querySelector('.burger');
+
+	burger.addEventListener('click', () => {
+		navList.classList.toggle('open');
+		burger.classList.toggle('toggle');
+	});
+	//close when clicking on nav-link
+	for (let i = 0; i < navItem.length; i++) {
+		let closeNav = navItem[i];
+		closeNav.addEventListener('click', () => {
+			navList.classList.toggle('open');
+			burger.classList.toggle('toggle');
+		});
+	}
+};
+navSlide();
+
 //* HOME PAGE
 const enterBtn = document.querySelector('.enter-btn');
 const btnCont = document.querySelector('.btn-container');
