@@ -38,6 +38,15 @@ const navSlide = () => {
 };
 navSlide();
 
+// mobile vh toolbar fix
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 //* HOME PAGE
 const enterBtn = document.querySelector('.enter-btn');
 const btnCont = document.querySelector('.btn-container');
