@@ -968,9 +968,9 @@ form textarea {
 		justify-content: space-around;
 		right: 0;
 		bottom: 0;
-		height: calc(100vh - 50px);
-		height: calc(var(--vh, 1vh) * 100);
-		min-height: -webkit-fill-available;
+		/* height: calc(100vh - 50px); */
+		height: calc(var(--vh, 1vh) * 100 - 50px);
+		/* min-height: -webkit-fill-available; */
 		width: 75%;
 		background-color: #161616;
 		/* background-color: #0e0000f1; */
