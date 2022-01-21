@@ -8,13 +8,13 @@
 
 html {
 	scroll-behavior: smooth;
+	/* height: 100%; */
 }
 
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: #000;
 	color: #fff;
-
 	/* ! Refreshing page does not bring it back to homepage... how to fix??? */
 	/* overflow-y: hidden; */
 }
@@ -172,7 +172,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 }
 
@@ -246,6 +246,7 @@ nav {
 	align-items: center;
 	justify-content: space-around;
 	height: 100vh;
+	min-height: -webkit-fill-available;
 	width: 100%;
 	background-color: #000;
 	color: #fff;
@@ -695,10 +696,13 @@ nav {
 #projects {
 	display: flex;
 	flex-wrap: wrap;
+	height: 100%;
 	width: 100%;
-	margin: 0;
-	padding: 0;
-	background-color: #000;
+	background-image: url('https://images.unsplash.com/photo-1533134755454-9549758f0e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	overflow-x: hidden;
 }
 
@@ -962,6 +966,7 @@ form textarea {
 		right: 0;
 		bottom: 0;
 		height: calc(100vh - 50px);
+		min-height: -webkit-fill-available;
 		width: 75%;
 		background-color: #161616;
 		/* background-color: #0e0000f1; */
