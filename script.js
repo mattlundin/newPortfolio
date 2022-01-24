@@ -1,4 +1,4 @@
-//* Navbar
+//* NAVBAR
 const nav = document.querySelector('nav');
 
 //~ Hide navbar on scroll
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-// MOBILE NAV
+//* MOBILE NAV
 const navSlide = () => {
 	const navList = document.querySelector('.nav-list');
 	const navItem = document.querySelectorAll('.nav-list li');
@@ -26,19 +26,28 @@ const navSlide = () => {
 	burger.addEventListener('click', () => {
 		navList.classList.toggle('open');
 		burger.classList.toggle('toggle');
+
+		//~ disable overscroll while nav is open
+		if (navList.classList.contains('open')) {
+			document.querySelector('body').style.overflow = 'hidden';
+		} else {
+			document.querySelector('body').style.overflow = 'scroll';
+		}
 	});
-	//close when clicking on nav-link
+	//~ close when clicking on nav-link
 	for (let i = 0; i < navItem.length; i++) {
 		let closeNav = navItem[i];
 		closeNav.addEventListener('click', () => {
 			navList.classList.toggle('open');
 			burger.classList.toggle('toggle');
+
+			document.querySelector('body').style.overflow = 'scroll';
 		});
 	}
 };
 navSlide();
 
-// mobile vh toolbar fix
+//~ mobile vh toolbar fix
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -52,6 +61,7 @@ const enterBtn = document.querySelector('.enter-btn');
 const btnCont = document.querySelector('.btn-container');
 const enterScreen = document.querySelector('.enter');
 const homePage = document.querySelector('#home');
+const body = document.querySelector('body');
 
 enterBtn.addEventListener('click', () => {
 	btnCont.style.display = 'none';
@@ -59,8 +69,10 @@ enterBtn.addEventListener('click', () => {
 	homePage.style.display = 'flex';
 	homePage.style.visibility = 'visible';
 
-	// ! Refreshing page does not bring it back to homepage... how to fix???
-	// document.querySelector('body').style.overflowY = 'visible';
+	if ((body.style.overflow = 'hidden')) {
+		body.style.overflow = 'auto';
+	}
+
 	document.querySelector('.enter').classList.add('enter-fade');
 
 	let breathe = document.querySelector('.breathe');
@@ -108,6 +120,11 @@ enterBtn.addEventListener('click', () => {
 	}, 5200);
 	document.getElementById('what').volume = '0.3';
 });
+
+// bring page back to top on reload
+window.onbeforeunload = () => {
+	window.scrollTo(0, 0);
+};
 
 //* ABOUT PAGE
 // window.onscroll = function () {

@@ -11,16 +11,17 @@ html {
 }
 
 body {
+	width: 100vw;
 	font-family: 'Poppins', sans-serif;
 	background-color: #000;
 	color: #fff;
 	/* ! Refreshing page does not bring it back to homepage... how to fix??? */
-	/* overflow-y: hidden; */
+	overflow-y: hidden;
 }
 
 html,
 body {
-	overflow-x: hidden;
+	width: 100%;
 }
 
 /** ===== SCROLLBAR ===== */
@@ -65,16 +66,16 @@ nav {
 }
 
 .logo {
-	margin-left: 10px;
+	margin: 0 15px;
+	padding: 0 5px;
+	/* margin-left: 10px; */
 	font-weight: bold;
 	list-style: none;
 }
 
 .logo a {
-	margin: 0 5px;
-	padding: 0 5px;
 	color: #fff;
-	font-size: 2.2rem;
+	font-size: 2.1rem;
 	background-color: #161616;
 	text-decoration: none;
 	transition: all 0.5s ease-in-out;
@@ -163,6 +164,7 @@ nav {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	overflow-y: hidden;
 }
 
 .enter {
@@ -431,7 +433,7 @@ nav {
 }
 
 .container {
-	height: 100%; /*! CHANGE TO % WHEN FINISHED*/
+	height: 100%;
 	width: 94%;
 	margin: 3%;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -450,6 +452,7 @@ nav {
 	margin: 3rem 0 2rem;
 	font-size: 2rem;
 	text-shadow: 4px 4px 8px #929292;
+	overflow-x: hidden;
 }
 
 .header h2 {
@@ -617,12 +620,14 @@ nav {
 	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	background-image: url('https://images.unsplash.com/photo-1533134755454-9549758f0e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 .projects-header {
@@ -856,6 +861,29 @@ form textarea {
 	.open {
 		transform: translateX(0);
 	}
+	/* .mobile-lines {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		left: 0;
+		width: calc(100% - 10px);
+	}
+	.top-line {
+		height: 10px;
+		width: 100%;
+		background: #fff;
+	}
+	.mid-line {
+		height: 10px;
+		width: 75%;
+		margin: 15px 0;
+		background: #fff;
+	}
+	.bottom-line {
+		height: 10px;
+		width: 50%;
+		background: #fff;
+	} */
 	/* END OF MOBILE NAV */
 
 	.bicycle img {
