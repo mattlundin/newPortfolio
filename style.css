@@ -140,6 +140,7 @@ nav {
 	margin-left: auto;
 	margin-right: 1rem;
 	cursor: pointer;
+	transition: 0.4s ease-in-out;
 }
 
 .burger .line {
@@ -447,8 +448,8 @@ nav {
 	z-index: 5;
 }
 .header {
-	position: relative;
 	text-align: center;
+	height: auto;
 	margin: 3rem 0 2rem;
 	font-size: 2rem;
 	text-shadow: 4px 4px 8px #929292;
@@ -457,10 +458,11 @@ nav {
 
 .header h2 {
 	font-weight: bold;
+	height: auto;
 }
 
 .header span {
-	height: 100%;
+	height: auto;
 	width: 96%;
 }
 

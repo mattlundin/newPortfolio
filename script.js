@@ -22,6 +22,7 @@ const navSlide = () => {
 	const navList = document.querySelector('.nav-list');
 	const navItem = document.querySelectorAll('.nav-list li');
 	const burger = document.querySelector('.burger');
+	const body = document.querySelector('body');
 
 	burger.addEventListener('click', () => {
 		navList.classList.toggle('open');
@@ -29,9 +30,11 @@ const navSlide = () => {
 
 		//~ disable overscroll while nav is open
 		if (navList.classList.contains('open')) {
-			document.querySelector('body').style.overflow = 'hidden';
+			body.style.overflow = 'hidden';
+			burger.style.marginRight = '1.9rem';
 		} else {
-			document.querySelector('body').style.overflow = 'scroll';
+			body.style.overflow = 'scroll';
+			burger.style.marginRight = '1rem';
 		}
 	});
 	//~ close when clicking on nav-link
@@ -41,7 +44,7 @@ const navSlide = () => {
 			navList.classList.toggle('open');
 			burger.classList.toggle('toggle');
 
-			document.querySelector('body').style.overflow = 'scroll';
+			body.style.overflow = 'scroll';
 		});
 	}
 };
