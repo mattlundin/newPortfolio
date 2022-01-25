@@ -31,7 +31,7 @@ const navSlide = () => {
 		//~ disable overscroll while nav is open
 		if (navList.classList.contains('open')) {
 			body.style.overflow = 'hidden';
-			burger.style.marginRight = '1.9rem';
+			burger.style.marginRight = '1.2rem';
 		} else {
 			body.style.overflow = 'scroll';
 			burger.style.marginRight = '1rem';
