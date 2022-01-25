@@ -123,7 +123,7 @@ enterBtn.addEventListener('click', () => {
 
 // bring page back to top on reload
 window.onbeforeunload = () => {
-	window.scrollTo(0, 0);
+	window.scrollTo(1, 0);
 };
 
 //* ABOUT PAGE
