@@ -476,18 +476,15 @@ nav {
 	cursor: pointer;
 } */
 
-@keyframes crawl {
+/* @keyframes crawl {
 	0% {
 		transform: rotate(-98deg);
-		/* right: -10%; */
 	}
 	50% {
 		transform: rotate(-82deg);
-		/* right: 50%; */
 	}
 	100% {
 		transform: rotate(-98deg);
-		/* right: 110%; */
 	}
 }
 @keyframes across {
@@ -500,7 +497,7 @@ nav {
 	100% {
 		right: 150%;
 	}
-}
+} */
 
 .column {
 	padding: 10px;
