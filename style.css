@@ -466,14 +466,15 @@ nav {
 	width: 96%;
 }
 
-.header span .bug {
+/* .header span .bug {
 	position: absolute;
 	font-size: 0.9rem;
 	z-index: 1;
 	transform: rotate(-98deg);
 	animation: crawl infinite ease 0.22s, across infinite ease 20s;
+	text-shadow: none;
 	cursor: pointer;
-}
+} */
 
 @keyframes crawl {
 	0% {
