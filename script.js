@@ -72,8 +72,8 @@ enterBtn.addEventListener('click', () => {
 	homePage.style.display = 'flex';
 	homePage.style.visibility = 'visible';
 
-	if ((body.style.overflow = 'hidden')) {
-		body.style.overflow = 'auto';
+	if ((body.style.overflowY = 'hidden')) {
+		body.style.overflowY = 'auto';
 	}
 
 	document.querySelector('.enter').classList.add('enter-fade');
@@ -95,6 +95,8 @@ enterBtn.addEventListener('click', () => {
 	document.querySelector('.uppercut').style.animation =
 		'uppercut 1.5s ease-out 2.3s';
 	document.querySelector('.toasty img').classList.add('toasty-animation');
+
+	document.querySelector('.header').style.overflowY = 'hidden';
 
 	setTimeout(function () {
 		document.querySelector('nav').style.visibility = 'visible';
