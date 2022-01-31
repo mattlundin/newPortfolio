@@ -15,8 +15,8 @@ body {
 	font-family: 'Poppins', sans-serif;
 	background-color: #000;
 	color: #fff;
-	/* ! Refreshing page does not bring it back to homepage... how to fix??? */
 	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 html,
@@ -68,7 +68,6 @@ nav {
 .logo {
 	margin: 0 15px;
 	padding: 0 5px;
-	/* margin-left: 10px; */
 	font-weight: bold;
 	list-style: none;
 }
@@ -446,6 +445,7 @@ nav {
 #about {
 	padding-bottom: 8%;
 	z-index: 5;
+	overflow: hidden;
 }
 .header {
 	text-align: center;
@@ -453,12 +453,13 @@ nav {
 	margin: 3rem 0 2rem;
 	font-size: 2rem;
 	text-shadow: 4px 4px 8px #929292;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .header h2 {
 	font-weight: bold;
-	height: auto;
+	/* height: auto; */
+	margin-bottom: 1rem;
 }
 
 .header span {
@@ -466,17 +467,18 @@ nav {
 	width: 96%;
 }
 
-/* .header span .bug {
+.header span .bug {
 	position: absolute;
 	font-size: 0.9rem;
+	color: #fff;
 	z-index: 1;
 	transform: rotate(-98deg);
-	animation: crawl infinite ease 0.22s, across infinite ease 20s;
+	animation: crawl infinite ease 0.22s, across infinite ease 10s;
 	text-shadow: none;
 	cursor: pointer;
-} */
+}
 
-/* @keyframes crawl {
+@keyframes crawl {
 	0% {
 		transform: rotate(-98deg);
 	}
@@ -497,7 +499,7 @@ nav {
 	100% {
 		right: 150%;
 	}
-} */
+}
 
 .column {
 	padding: 10px;
