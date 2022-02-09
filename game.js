@@ -48,6 +48,10 @@ function drawGame() {
 		speed = 15;
 	}
 
+	if (score > 8) {
+		speed = 18;
+	}
+
 	setTimeout(drawGame, 1000 / speed);
 }
 
