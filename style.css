@@ -438,7 +438,7 @@ nav {
 	margin: 3%;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 25px;
-	overflow: none;
+	overflow: hidden;
 }
 
 /** ===== ABOUT PAGE ===== */
@@ -462,9 +462,14 @@ nav {
 	margin-bottom: 1rem;
 }
 
-.header span {
+.header a {
+	overflow: hidden;
+}
+
+.header a span {
 	height: auto;
 	width: 96%;
+	overflow: hidden;
 }
 
 .header span .bug {
@@ -491,13 +496,13 @@ nav {
 }
 @keyframes across {
 	0% {
-		right: -50%;
+		right: 10%;
 	}
 	50% {
-		right: 50%;
+		right: 90%;
 	}
 	100% {
-		right: 150%;
+		right: 10%;
 	}
 }
 
