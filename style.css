@@ -491,7 +491,7 @@ nav {
 }
 @keyframes across {
 	0% {
-		right: 100%;
+		right: 10%;
 	}
 	50% {
 		right: 90%;
